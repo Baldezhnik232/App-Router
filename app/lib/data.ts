@@ -41,7 +41,7 @@ export async function fetchLatestInvoices() {
 
     const latestInvoices = data.map((invoice) => ({
       ...invoice,
-      amount: formatCurrency(invoice.amount),
+      amount: invoice.amount,
     }));
     return latestInvoices;
   } catch (error) {
